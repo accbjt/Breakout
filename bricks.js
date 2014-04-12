@@ -1,13 +1,12 @@
 function Brick(){
 	Entity.call(this)
 
-	this.x = 0
-	this.y = 0
 
 	game.bricks = []
+
 	for (int row = 0; row < 3; row++)
 	for (int col = 0; col < 10; col++)
-    game.bricks.push(new Brick(col, row))
+    game.bricks.push(new Brick(col, row)
 
 function Brick(col, row) {
   this.height = 30 // ?
@@ -16,7 +15,6 @@ function Brick(col, row) {
   this.x = this.width * col
   this.y = this.height * row
 }
-
 }
 
 Paddle.prototype = Object.create(Entity.prototype) //creates a new ball as a child entity using entity as parent
